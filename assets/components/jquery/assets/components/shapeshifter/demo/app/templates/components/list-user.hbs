@@ -1,0 +1,7 @@
+<img {{bind-attr src="user.picture" alt="{{fullName}}"}}>
+<b>{{user.name.first}}</b> <b>{{user.name.last}}</b>
+<p><i class="ion-email"></i>{{user.email}}</p>
+<div class="actions">
+	{{spy-user user=user}}
+	{{strike-user user=user}}
+</div>

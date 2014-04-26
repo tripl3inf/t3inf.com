@@ -1,0 +1,8 @@
+<header>
+	<section>
+		<h1>Shapeshifter Demo</h1>
+		<span>NSA Edition</span>
+		<button {{action "toggleSpying"}} {{bind-attr class="isSpying:active"}}><i class="ion-search"></i>{{#if isSpying}}Disable{{else}}Enable{{/if}} Spying</button>
+		<button {{action "toggleStriking"}} {{bind-attr class="isStriking:active"}}><i class="ion-jet"></i>{{#if isStriking}}Disable{{else}}Enable{{/if}} Drone Strike</button>
+	</section>
+</header>
