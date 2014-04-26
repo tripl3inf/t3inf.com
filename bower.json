@@ -1,0 +1,31 @@
+{
+  "name": "t3iDEV",
+  "version": "0.0.0",
+  "authors": [
+    "tripl3inf <tripl3infinity@gmail.com>"
+  ],
+  "description": "t3inf FE components",
+  "main": "assets/components/main.js",
+  "license": "MIT",
+  "homepage": "t3inf.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "shapeshifter": "~0.1.2",
+    "jqueryui": "~1.10.4",
+    "pure": "~0.4.2",
+    "font-awesome": "~4.0.3",
+    "greensock-js": "~1.10.2",
+    "snap.svg": "~0.2.0",
+    "Parallaxjs": "git://github.com/stolksdorf/Parallaxjs.git",
+    "jpreloader": "http://demo.inwebson.com/download/jpreloader-v2.zip"
+  }
+}

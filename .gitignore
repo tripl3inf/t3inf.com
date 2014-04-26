@@ -1,0 +1,8 @@
+assets/components**
+html/**
+**/phpmyadmin/**
+node_modules**
+.project
+wordpress**
+local-config.php
+**/content/uploads/**

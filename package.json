@@ -1,0 +1,22 @@
+{
+  "name": "t3i_assets",
+  "version": "0.1.0",
+  "author": "tripl3infinity webOps",
+  "private": true,
+  "description": "Tasks for front end assets",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "matchdep": "^0.3.0",
+    "grunt-imageoptim": "^1.4.1"
+  },
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "grunt-imageoptim": "~1.4.1",
+    "matchdep": "~0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}
