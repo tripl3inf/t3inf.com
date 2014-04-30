@@ -6,3 +6,4 @@ node_modules**
 wordpress**
 local-config.php
 **/content/uploads/**
+npm-debug.log
