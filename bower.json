@@ -26,6 +26,7 @@
     "greensock-js": "~1.10.2",
     "snap.svg": "~0.2.0",
     "Parallaxjs": "git://github.com/stolksdorf/Parallaxjs.git",
-    "jpreloader": "http://demo.inwebson.com/download/jpreloader-v2.zip"
+    "jpreloader": "http://demo.inwebson.com/download/jpreloader-v2.zip",
+    "normalize.css": "~3.0.1"
   }
 }

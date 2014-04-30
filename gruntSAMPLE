@@ -1,0 +1,158 @@
+module.exports = function(grunt) {
+		// now that we've loaded the package.json and the node_modules we set the base path
+		// for the actual execution of the tasks
+		//grunt.file.setBase('../')
+
+	// runs 'loadNpmTasks' automatically for each dependancy
+	// instead of running individ. like so: 'grunt.loadNpmTasks('grunt-contrib-jshint');'
+	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+
+	// Project configuration.
+	grunt.initConfig({
+		// This line makes your node configurations available for use
+		pkg: grunt.file.readJSON('package.json'),
+
+
+
+		main: {
+			src: ['bower/components/jquery_1.7.1/jquery.js', 'src/js/main/*.js'],
+			concat: 'src/js/main.conc.<%= pkg.version %>.js',
+			dist: 'dist/js/main.min.<%= pkg.version %>.js',
+			css: {
+				src: ['src/css/main/*.css'],
+			},
+		},
+
+		// This is where we configure JSHint
+		jshint: {
+			// You get to make the name
+			// The paths tell JSHint which files to validate
+			options: {
+				// prohibits use of explicitely undeclared variables
+				undef: true,
+				// warn of unused variables
+				unused: true,
+				// enforces consistency of quote marks
+				quotmark: true,
+				// throws error on trainling whitespace
+							trailing: true,
+				// defines globals exposed by modern browsers
+				browser: true,
+				// defines globals exposed by jQuery
+				globals: {
+					jQuery: true,
+				},
+				reporter: require('jshint-stylish'),
+							//reporterOutput: 'js_lint_result.xml'
+				force: true,
+				},
+				beforeconcat: ['<%= main.src %>'],
+				afterconcat: ['<%= main.dist %>'],
+				main: ['src/js/*.js'],
+			},
+
+
+
+
+
+
+		// concact config
+		concat: {
+			options: {
+				separator: ';',
+				stripBanners: true,
+			},
+			main: {
+				src: ['<%= main.src %>'],
+				dest: '<%= main.concat %>',
+			},
+		},
+
+		// uglify config
+		uglify : {
+			main: {
+				src: ['<%= main.concat %>'],
+				dest: '<%= main.dist %>',
+				options: {
+					beautify: false,
+					compress: {
+						drop_console: true,
+					},
+					mangle: false,
+					banner: '/*\n <%= pkg.name %> - main scripts - <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
+					footer: '==========> END main scripts <==========',
+				},
+			},
+		},
+
+		// clean up concacted file
+		clean: {
+			main: {
+			src: ['<%= main.concat %>'],
+			},
+		},
+
+
+		csslint: {
+			options: {
+			csslintrc: '.csslintrc',
+				formatters: [
+					{id: 'compact', dest: 'csslint.xml'}
+				]
+			},
+			main: {	f
+				force: true,
+				src: ['<%= main.css.src %>'],
+			},
+		},
+
+
+		// image minification
+		imagemin: {
+			main: {
+				options: {
+						optimizationLevel: 7,
+						progressive: true
+						//pngquant: true
+					},
+					files: [
+						{
+							// Set to true to enable the following options\u2026
+							expand: true,
+							// cwd is 'current working directory'
+							cwd: 'src/img/',
+							src: ['*.{png,jpg,gif}'],   // Actual patterns to match
+							// Could also match cwd line above. i.e. project-directory/img/
+							dest: 'dist/img'
+						}
+					]
+			}
+		}
+
+
+
+
+
+
+	});
+
+
+
+
+//  grunt.registerTask('dh_scripts', ['jshint:common_scripts']);
+
+	// Default task(s) run on grunt command
+	grunt.registerTask('default', ['jshint:beforeconcat','concat:main','uglify:main','clean:main','jshint:afterconcat','csslint:main']);
+	grunt.registerTask('image', ['imagemin:main']);
+};
+
+
+
+
+
+
+
+
+
+
+

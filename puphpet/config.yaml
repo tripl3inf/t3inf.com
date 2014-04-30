@@ -98,7 +98,7 @@ nginx:
     vhosts:
         6zielK0EyR5C:
             server_name: t3inf.dev
-            www_root: /var/www/t3inf.dev
+            www_root: /var/www/
             listen_port: '80'
             index_files:
                 - index.html

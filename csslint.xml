@@ -1,0 +1,285 @@
+assets/css/index.css: line 7, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 7, col 1, Warning - Rule is empty.
+assets/css/index.css: line 11, col 1, Warning - Rule is empty.
+assets/css/index.css: line 11, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 15, col 1, Warning - Rule is empty.
+assets/css/index.css: line 15, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 30, col 1, Warning - Don't use adjoining classes.
+assets/css/index.css: line 35, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 43, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 49, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 56, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 66, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 66, col 12, Warning - Unqualified attribute selectors are known to be slow.
+assets/css/index.css: line 72, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 74, col 22, Warning - Values of 0 shouldn't have units specified.
+assets/css/index.css: line 74, col 26, Warning - Values of 0 shouldn't have units specified.
+assets/css/index.css: line 75, col 19, Warning - Values of 0 shouldn't have units specified.
+assets/css/index.css: line 75, col 23, Warning - Values of 0 shouldn't have units specified.
+assets/css/index.css: line 76, col 14, Warning - Values of 0 shouldn't have units specified.
+assets/css/index.css: line 76, col 18, Warning - Values of 0 shouldn't have units specified.
+assets/css/index.css: line 79, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 86, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 86, col 1, Warning - Rule is empty.
+assets/css/index.css: line 90, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 95, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 99, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 103, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 113, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 133, col 1, Warning - Don't use IDs in selectors.
+assets/css/index.css: line 137, col 1, Warning - Don't use IDs in selectors.
+assets/css/main.css: line 10, col 2, Warning - Use of !important
+assets/css/main.css: line 25, col 1, Warning - Don't use IDs in selectors.
+assets/css/main.css: line 33, col 1, Warning - Don't use IDs in selectors.
+assets/css/main.css: line 34, col 1, Warning - Don't use IDs in selectors.
+assets/css/main.css: line 55, col 1, Warning - Don't use IDs in selectors.
+assets/css/main.css: line 56, col 60, Warning - Values of 0 shouldn't have units specified.
+assets/css/main.css: line 63, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 68, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 73, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 78, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 83, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 88, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 93, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 100, col 1, Warning - Don't use IDs in selectors.
+assets/css/main.css: line 108, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 113, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 118, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 123, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 128, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 133, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 138, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 143, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 148, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 154, col 1, Warning - Don't use IDs in selectors.
+assets/css/main.css: line 165, col 1, Warning - Element (i.fa) is overqualified, just use .fa without element name.
+assets/css/main.css: line 175, col 1, Warning - 2 IDs in the selector, really?
+assets/css/main.css: line 182, col 1, Warning - 3 IDs in the selector, really?
+assets/css/portfolio.css: line 2, col 1, Warning - The universal selector (*) is known to be slow.
+assets/css/portfolio.css: line 2, col 14, Warning - The universal selector (*) is known to be slow.
+assets/css/portfolio.css: line 2, col 4, Warning - The universal selector (*) is known to be slow.
+assets/css/portfolio.css: line 3, col 64, Warning - The box-sizing property isn't supported in IE6 and IE7.
+assets/css/portfolio.css: line 7, col 1, Warning - Don't use IDs in selectors.
+assets/css/portfolio.css: line 15, col 1, Warning - Don't use IDs in selectors.
+assets/css/portfolio.css: line 25, col 1, Warning - Don't use IDs in selectors.
+assets/css/portfolio.css: line 32, col 22, Warning - Values of 0 shouldn't have units specified.
+assets/css/portfolio.css: line 32, col 26, Warning - Values of 0 shouldn't have units specified.
+assets/css/portfolio.css: line 33, col 19, Warning - Values of 0 shouldn't have units specified.
+assets/css/portfolio.css: line 33, col 23, Warning - Values of 0 shouldn't have units specified.
+assets/css/portfolio.css: line 34, col 14, Warning - Values of 0 shouldn't have units specified.
+assets/css/portfolio.css: line 34, col 18, Warning - Values of 0 shouldn't have units specified.
+assets/css/portfolio.css: line 37, col 1, Warning - Don't use IDs in selectors.
+assets/css/portfolio.css: line 43, col 1, Warning - Don't use IDs in selectors.
+assets/css/portfolio.css: line 44, col 1, Warning - Don't use IDs in selectors.
+assets/css/pureTheme.css: line 11, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 36, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 37, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 67, col 1, Warning - Outlines shouldn't be hidden unless other visual changes are made.
+assets/css/pureTheme.css: line 148, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 165, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 192, col 5, Warning - The property -moz-appearance is compatible with -webkit-appearance and should be included as well.
+assets/css/pureTheme.css: line 194, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 215, col 5, Warning - The box-sizing property isn't supported in IE6 and IE7.
+assets/css/pureTheme.css: line 217, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 218, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 228, col 5, Warning - The property -moz-appearance is compatible with -webkit-appearance and should be included as well.
+assets/css/pureTheme.css: line 231, col 5, Warning - The box-sizing property isn't supported in IE6 and IE7.
+assets/css/pureTheme.css: line 241, col 5, Warning - The property -moz-appearance is compatible with -webkit-appearance and should be included as well.
+assets/css/pureTheme.css: line 357, col 5, Warning - The box-sizing property isn't supported in IE6 and IE7.
+assets/css/pureTheme.css: line 496, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 497, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 540, col 28, Warning - Values of 0 shouldn't have units specified.
+assets/css/pureTheme.css: line 540, col 32, Warning - Values of 0 shouldn't have units specified.
+assets/css/pureTheme.css: line 544, col 20, Warning - Values of 0 shouldn't have units specified.
+assets/css/pureTheme.css: line 544, col 24, Warning - Values of 0 shouldn't have units specified.
+assets/css/pureTheme.css: line 672, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 695, col 1, Warning - Outlines shouldn't be hidden unless other visual changes are made.
+assets/css/pureTheme.css: line 712, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 714, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 716, col 5, Warning - margin can't be used with display: inline.
+assets/css/pureTheme.css: line 719, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 721, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 768, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 811, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 812, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 828, col 5, Warning - Property with star prefix found.
+assets/css/pureTheme.css: line 837, col 5, Warning - Using height with padding can sometimes make elements larger than you expect.
+assets/css/pureTheme.css: line 845, col 1, Warning - Rule is empty.
+assets/css/pureTheme.css: line 850, col 24, Warning - Values of 0 shouldn't have units specified.
+assets/css/pureTheme.css: line 850, col 28, Warning - Values of 0 shouldn't have units specified.
+assets/css/pureTheme.css: line 853, col 20, Warning - Values of 0 shouldn't have units specified.
+assets/css/pureTheme.css: line 853, col 32, Warning - Values of 0 shouldn't have units specified.
+assets/css/pureTheme.css: line 861, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 862, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 868, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 869, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 916, col 27, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 931, col 27, Warning - Element (li.pure-menu-selected) is overqualified, just use .pure-menu-selected without element name.
+assets/css/pureTheme.css: line 937, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 937, col 16, Warning - Don't use adjoining classes.
+assets/css/pureTheme.css: line 1055, col 2, Warning - Duplicate property 'background' found.
+assets/css/pureTheme.css: line 1115, col 5, Warning - display:inline has no effect on floated elements (but may be used to fix the IE6 double-margin bug).
+assets/css/pureTheme.css: line 1116, col 5, Warning - margin can't be used with display: inline.
+assets/css/pureTheme.css: Warning - Too many font-size declarations (11), abstraction needed.
+assets/css/skeleton-960.css: line 8, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 8, col 20, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 12, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 16, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 20, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 24, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 28, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 32, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 36, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 40, col 8, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 44, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 48, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 52, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 56, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 60, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 64, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 68, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 72, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 76, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 80, col 25, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 80, col 25, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 80, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 80, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 84, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 84, col 26, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 84, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 84, col 26, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 89, col 2, Warning - display:inline has no effect on floated elements (but may be used to fix the IE6 double-margin bug).
+assets/css/skeleton-960.css: line 95, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 95, col 15, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 99, col 15, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 99, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 168, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 173, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 173, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 178, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 178, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 183, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 183, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 188, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 188, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 193, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 193, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 198, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 198, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 203, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 203, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 208, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 208, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 213, col 18, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 213, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 218, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 218, col 19, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 223, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 223, col 19, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 228, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 228, col 19, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 233, col 19, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 233, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 238, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 238, col 19, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 243, col 19, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 243, col 1, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 256, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 256, col 21, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 259, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 262, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 265, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 268, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 271, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 274, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 277, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 280, col 9, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 283, col 10, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 286, col 10, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 289, col 10, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 292, col 10, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 295, col 10, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 298, col 10, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 301, col 10, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 304, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 307, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 310, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 310, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 310, col 26, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 310, col 26, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 313, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 313, col 27, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 313, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 313, col 27, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 317, col 3, Warning - display:inline has no effect on floated elements (but may be used to fix the IE6 double-margin bug).
+assets/css/skeleton-960.css: line 322, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 322, col 16, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 325, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 325, col 16, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 14, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 34, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 54, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 76, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 97, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 118, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 138, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 160, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 182, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 224, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 248, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 272, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 298, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 324, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 349, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 374, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 392, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 416, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 416, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 440, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 440, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 464, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 464, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 489, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 489, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 385, col 203, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 391, col 3, Warning - Use of !important
+assets/css/skeleton-960.css: line 394, col 3, Warning - display:inline has no effect on floated elements (but may be used to fix the IE6 double-margin bug).
+assets/css/skeleton-960.css: line 399, col 16, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 399, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 402, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 402, col 16, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 14, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 34, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 54, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 76, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 97, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 118, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 138, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 160, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 182, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 203, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 224, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 248, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 272, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 298, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 324, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 349, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 374, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 392, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 416, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 416, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 440, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 440, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 464, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 464, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 489, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 418, col 489, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 424, col 3, Warning - Use of !important
+assets/css/skeleton-960.css: line 427, col 3, Warning - display:inline has no effect on floated elements (but may be used to fix the IE6 double-margin bug).
+assets/css/skeleton-960.css: line 432, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 432, col 16, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 435, col 2, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 435, col 16, Warning - Don't use adjoining classes.
+assets/css/skeleton-960.css: line 531, col 2, Warning - Use of !important

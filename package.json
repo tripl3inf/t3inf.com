@@ -7,7 +7,13 @@
   "devDependencies": {
     "grunt": "^0.4.4",
     "matchdep": "^0.3.0",
-    "grunt-imageoptim": "^1.4.1"
+    "grunt-imageoptim": "^1.4.1",
+    "grunt-dispatch": "^0.2.1",
+    "grunt-bowercopy": "^1.0.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-cssmin": "^0.9.0"
   },
   "license": "ISC"
 }

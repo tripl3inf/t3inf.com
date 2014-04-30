@@ -22,7 +22,7 @@ function remove_parent_scripts() {
 }
 
 // deregister jquery and include from google CDN with bower managed fallback
-$jq_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'; // the URL to check against
+/* $jq_url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'; // the URL to check against
 $jq_test_url = @fopen($jq_url,'r'); // test parameters
 
 if($jq_test_url !== false) { // test if the URL exists
@@ -38,63 +38,36 @@ if($jq_test_url !== false) { // test if the URL exists
 	function load_local_jQuery() {
 		if (!is_admin()) {
 			wp_deregister_script('jquery'); // deregisters the default WordPress jQuery
-			wp_register_script('jquery', get_stylesheet_directory_uri().'/common/js/vender/bower/jquery/dist/jquery.min.js', __FILE__, false, '1.11.0', true); // register the local file
+			wp_register_script('jquery', get_stylesheet_directory_uri().'/common/js/vender/jquery.min.js', __FILE__, false, '1.11.0', true); // register the local file
 			wp_enqueue_script('jquery'); // enqueue the local file
 		}
 	}
 	add_action('wp_enqueue_scripts', 'load_local_jQuery'); // initiate the function
-}
+} */
 
 
-
-
-// Proper way to enqueue CDN scripts and styles w/ local fallbacks
-//test CDN URLS
-$pure_url = 'http://yui.yahooapis.com/combo?pure/0.4.2/base-min.css&pure/0.4.2/grids-min.css&pure/0.4.2/forms-min.css'; // the URL to check against
-$pure_test_url = @fopen($pure_url,'r'); // test parameters
-
-if($pure_test_url !== false) { // test if the URL exists
-	function load_external_pure() { // load external file
-		wp_register_style('pure', 'http://yui.yahooapis.com/pure/0.4.2/pure-min.css'); // register the external file
-		wp_enqueue_style('pure'); // enqueue the external file
-		// include custom skin
-		wp_register_style('pure.skin', get_stylesheet_directory_uri().'/common/css/pureTheme.css');
-		wp_enqueue_style('pure.skin');
-	}
-	add_action('wp_enqueue_scripts', 'load_external_pure');
-} else {
-	function load_local_pure() {
-		wp_register_style('pure.base.min', get_stylesheet_directory_uri().'/common/js/vender/bower/pure/base-min.css'); // register the local file
-		wp_enqueue_style('pure.base.min');
-		wp_register_style('pure.grids.min', get_stylesheet_directory_uri().'/common/js/vender/bower/pure/grids-min.css'); // register the local file
-		wp_enqueue_style('pure.grids.min');
-		wp_register_style('pure.forms', get_stylesheet_directory_uri().'/common/js/vender/bower/pure/forms.css'); // register the local file
-		wp_enqueue_style('pure.forms');
-		wp_register_style('pure.skin', get_stylesheet_directory_uri().'/common/css/pureTheme.css');
-		wp_enqueue_style('pure.skin');
-	}
-	add_action('wp_enqueue_scripts', 'load_local_pure');
-}
 
 //TODO: load assets from CDN w/ fallback
 function tripl3inf_main_assets() {
-	wp_enqueue_style( 'normalize', get_stylesheet_directory_uri().'/common/css/vender/normalize.css');
+	//wp_enqueue_style( 'normalize', get_stylesheet_directory_uri().'/common/css/vender/normalize.css');
 
-	wp_enqueue_style( 'main', get_stylesheet_directory_uri().'/common/css/main.css');
-	//wp_enqueue_style( 'awesome_icons', get_stylesheet_directory_uri().'/common/js/vender/bower/font-awesome/css/font-awesome.css');
+	wp_register_script( 'components_js', get_stylesheet_directory_uri().'/common/js/components/components.min.js');
+	wp_enqueue_script('components_js');
+	wp_register_srcipt( 'core_js', get_stylesheet_directory_uri().'/common/js/components/core.min.js', array('components_js'), true);
+	wp_enqueue_script('core_js');
 
-	wp_register_style('awesome_font', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'); // register the external file
-	wp_enqueue_style('awesome_font'); // enqueue the external file
+	//wp_register_style('awesome_font', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'); // register the external file
+	//wp_enqueue_style('awesome_font'); // enqueue the external file
 
 	//wp_enqueue_script( 'easeljs', 'http://code.createjs.com/createjs-2013.12.12.min.js"');
-	wp_enqueue_script( 'snap', get_stylesheet_directory_uri().'/common/js/vender/bower/Snap.svg/dist/snap.svg-min.js');
+	//wp_enqueue_script( 'snap', get_stylesheet_directory_uri().'/common/js/vender/bower/Snap.svg/dist/snap.svg-min.js');
 
-	wp_enqueue_script( 'jqueryui', get_stylesheet_directory_uri().'/common/js/vender/bower/jqueryui/ui/minified/jquery-ui.min.js', array('jquery'),'1.1', true);
-	wp_enqueue_script( 'jqdrag', get_stylesheet_directory_uri().'/common/js/vender/bower/jqueryui/ui/minified/jquery.ui.draggable.min.js', array('jqueryui'), true);
-	wp_enqueue_script( 'jqdrop', get_stylesheet_directory_uri().'/common/js/vender/bower/jqueryui/ui/minified/jquery.ui.droppable.min.js', array('jqueryui'), true);
-	wp_enqueue_script( 'shapeshift', get_stylesheet_directory_uri().'/common/js/vender/bower/jquery.shapeshift/core/jquery.shapeshift.js', array('jqueryui'), true);
-	wp_enqueue_script( 'tweenMax', get_stylesheet_directory_uri().'/common/js/vender/TweenMax.min.js');
-	wp_enqueue_script( 'gridOvrLay', get_stylesheet_directory_uri().'/common/js/gridOverlayPlugin.js');
+	//wp_enqueue_script( 'jqueryui', get_stylesheet_directory_uri().'/common/js/vender/bower/jqueryui/ui/minified/jquery-ui.min.js', array('jquery'),'1.1', true);
+	//wp_enqueue_script( 'jqdrag', get_stylesheet_directory_uri().'/common/js/vender/bower/jqueryui/ui/minified/jquery.ui.draggable.min.js', array('jqueryui'), true);
+	//wp_enqueue_script( 'jqdrop', get_stylesheet_directory_uri().'/common/js/vender/bower/jqueryui/ui/minified/jquery.ui.droppable.min.js', array('jqueryui'), true);
+	//wp_enqueue_script( 'shapeshift', get_stylesheet_directory_uri().'/common/js/vender/bower/jquery.shapeshift/core/jquery.shapeshift.js', array('jqueryui'), true);
+	//wp_enqueue_script( 'tweenMax', get_stylesheet_directory_uri().'/common/js/vender/TweenMax.min.js');
+	//wp_enqueue_script( 'gridOvrLay', get_stylesheet_directory_uri().'/common/js/gridOverlayPlugin.js');
 
 }
 add_action( 'wp_enqueue_scripts', 'tripl3inf_main_assets' );
