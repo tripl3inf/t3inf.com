@@ -5,11 +5,11 @@ module.exports = function(grunt) {
 build: {
 	dist: {
 		js: {
-			core: 'htdocs/content/themes/t3i_Skeleton/common/js/core/',
+			core: 'htdocs/content/themes/t3i_Skeleton/common/js/core',
 			vender: 'htdocs/content/themes/t3i_Skeleton/common/js/components'
 		},
 		css: {
-			core: 'htdocs/content/themes/t3i_Skeleton/common/css/core/',
+			core: 'htdocs/content/themes/t3i_Skeleton/common/css/core',
 			vender: 'htdocs/content/themes/t3i_Skeleton/common/css/components'
 		}
 	},
@@ -19,8 +19,8 @@ build: {
 			vender: 'assets/staging/js/vender/'
 		},
 		css: {
-			core: 'assets/staging/css/core/',
-			vender: 'assets/staging/css/vender/'
+			core: 'assets/staging/css/core',
+			vender: 'assets/staging/css/vender'
 		}
 	},
 },
@@ -79,45 +79,55 @@ bowercopy: {
 //END copy components
 
 
-//========================================
-//  process scripts
-//=======================================|
 concat: {
-	options: {
-		separator: ';'
-	},
-	mainScripts: {
-		src: ['assets/js/*.js'],
-		dest: 'htdocs/content/themes/t3i_Skeleton/common/js/main.js'
-	}
+    js_core: {
+       src: [
+             'assets/js/core/*.js'
+            ],
+        dest: '<%= build.staging.js.core %>/core.min.js'
+    }
 },
 
 
+//========================================
+//  process scripts
+//=======================================|
+
+// remove existing file/s
+clean: {
+	js_vender: ['<%= build.staging.js.vender %>']
+},
 
 //uglify config
 uglify : {
+	core: {
+		options: {
+			beautify: false,
+			compress: true,
+			mangle: true,
+			banner: '/*\n js core - <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
+			footer: '==========> END core scripts <=========='
+		},
+		src: '<%= build.staging.js.core %>/*.js',
+		dest: '<%= build.dist.js.core %>core.min.js'
+	},
 	vender: {
 		options: {
 			beautify: false,
-			compress: {
-				drop_console: true,
-			},
+			compress: true,
+//			compress: {
+//				drop_console: true,
+//			},
 			mangle: true,
 			banner: '/*\n js vender dependancies - <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
-			footer: '==========> END main scripts <=========='
+			footer: '/*\n==========> END vender dependancies scripts <==========*/\n'
 		},
-		//src: [''],
-		//dest: '<%= build.dist.js.vender %>',
 		files: [{
 			//expand: true,
-			cwd: '<%= build.staging.js.vender %>',
-			src: '**/*.js',
+			//cwd: 'assets/staging/js/vender',
+			src: '<%= build.staging.js.vender %>/**/*.js',
 			dest: '<%= build.dist.js.vender %>/components.min.js'
 		}]
-	},
-	main: {
-		src: ['htdocs/content/themes/t3i_Skeleton/common/js/main.js'],
-		dest: 'htdocs/content/themes/t3i_Skeleton/common/js/main.min.js',
 	}
 },
 
@@ -126,48 +136,110 @@ uglify : {
 //=========================================|
 // css processing
 //=========================================|
+clean: {
+	css_lint_results: ['cssLint_core_results*.xml','cssLint_vender_results*.xml']
+},
 
 csslint: {
-  options: {
-    rules: {
-        "import": false
-    },
-	formatters: [{id: 'compact', dest: 'csslint.xml'}]
-  },
-  main: {
-    src: "assets/css/*.css"
-  }
+	core: {
+		options: {
+			import: false,
+			csslintrc: '.csslintrc',
+			formatters: [{id: 'compact', dest: 'assets/logs/cssLint_core_results_<%= grunt.template.today("yyyy-mm-dd") %>.xml'}]
+		},
+	    src: 'assets/css/*.css'
+	  },
+	vender: {
+		options: {
+			import: false,
+			csslintrc: '.csslintrc',
+			formatters: [{id: 'compact', dest: 'assets/logs/cssLint_vender_results_<%= grunt.template.today("yyyy-mm-dd") %>.xml'}]
+		},
+	    src: 'assets/staging/css/vender/*.css'
+	  }
 },
+
+//concat: {
+//	css_core: {
+//	 src: ['assets/css/*.css'],
+//	 dest: ['core_combined.css']
+//	}
+//},
+
+
+//cssmin: {
+//	combine: {
+//		files: {
+//			'staging/css/core/core_combined.css': ['assets/css/core/*.css']
+//			}
+//	}
+//}
+
+
 
 concat: {
-    css: {
-       src: [
-             'assets/css/*.css'
-            ],
-        dest: 'htdocs/content/themes/t3i_Skeleton/common/css/combined.css'
-    }
+	css_core: {
+		options: {
+			stripBanners: true
+		},
+		src: ['assets/css/core/skeleton-960.css', 'assets/css/core/pureTheme.css', 'assets/css/core/main.css', 'assets/css/core/index.css', 'assets/css/core/portfolio.css'],
+		dest: '<%= build.staging.css.core %>/core_combined.css'
+	}
 },
 
-cssmin: {
-  minify: {
-    expand: true,
-    src: 'htdocs/content/themes/t3i_Skeleton/common/css/combined.css',
-    dest: 'main.min.css'
-  }
+
+uncss: {
+	core : {
+		options: {
+			csspath: '../../../../<%= build.staging.css.core %>/',
+			stylesheets: ['core_combined.css']
+		},
+		files : [{
+			src : 'htdocs/content/themes/t3i_Skeleton/page-index.php',
+			dest : '<%= build.staging.css.core %>/core_uncss_results.css'
+		}]
+	}
+},
+
+
+autoprefixer: {
+	css_core: {
+		options : {
+			//diff: 'patch.css', //splits up the prefix'd css from rules w/o prefixes ?
+			//diff: false,
+			cascade: true
+		},
+		src : 'assets/staging/css/core/core_uncss_results.css',
+		dest : 'assets/staging/css/core/core_autoprefix_results.css'
+	}
+},
+
+
+csscomb: {
+    css_core: {
+    	options: {
+    		config: 'assets/configs/zen.json'
+    	},
+        files: {
+            'assets/staging/css/core/core_combed_results.css': ['assets/staging/css/core/core_autoprefix_results.css'],
+        },
+    },
 }
 
-
-
-
-
+/*
+ * *********** END TASKS *************************
+ */
 
 
 });
+ grunt.registerTask('test_css', ['concat:css_core']);
+//	grunt.registerTask('process_css', ['clean:css_lint_results', 'csslint:core', 'concat:css_core', 'uncss:core', 'bowercopy:pull_vender_css', 'csslint:vender']);
 
   grunt.registerTask('default', ['imageoptim:main']);
 
-  grunt.registerTask('pull_assets', ['bowercopy:pull_vender_js', 'bowercopy:pull_vender_css', 'uglify:vender']);
+  grunt.registerTask('pull_assets', ['clean', 'bowercopy:pull_vender_js', 'concat:js_core', 'uglify:vender', 'uglify:core']);
+  //, 'bowercopy:pull_vender_css',
   grunt.registerTask('process_scripts', ['concat:main']);
   grunt.registerTask('ugly', ['uglify:cdn', 'uglify:main']);
-  grunt.registerTask('process_css', ['csslint:main','concat:css','cssmin']);
+
 };

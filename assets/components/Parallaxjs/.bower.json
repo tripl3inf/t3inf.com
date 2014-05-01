@@ -7,8 +7,8 @@
     "branch": "master",
     "commit": "d2d3f1f9b268c1777f5dc2f335f7915d938d3c1b"
   },
-  "_source": "git://github.com/stolksdorf/Parallaxjs.git",
+  "_source": "https://github.com/stolksdorf/Parallaxjs.git",
   "_target": "*",
-  "_originalSource": "git://github.com/stolksdorf/Parallaxjs.git",
+  "_originalSource": "https://github.com/stolksdorf/Parallaxjs.git",
   "_direct": true
 }

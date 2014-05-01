@@ -1,4 +1,3 @@
-// css linting options
 {
   "important": false,
   "adjoining-classes": false,
