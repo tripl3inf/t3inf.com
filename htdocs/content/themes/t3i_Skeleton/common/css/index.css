@@ -1,0 +1,153 @@
+@CHARSET "UTF-8";
+
+.menu {
+	display: none;
+}
+
+#index.container {
+	/* border: 1px solid orange; */
+}
+
+#portfolio.container {
+	/* border: 1px solid purple; */
+}
+
+#contact.container {
+	/* border: 1px solid yellow; */
+}
+
+.btn {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: red;
+}
+
+
+
+
+
+.paralax.container {
+	height: 600px;
+	margin-top: 100px;
+}
+
+#mainNavBtns {
+	position: absolute;
+	bottom: 165px;
+}
+
+
+
+/* portfolio panel */
+#portfolio {
+	padding: 0;
+	display: block;
+	position: relative;
+}
+
+#portfolio .portContent {
+	position: relative;
+/* 	outline: 1px solid red; */
+	margin: 0 auto;
+	padding: 0;
+}
+
+#portfolio .item {
+	display: block;
+	text-align: center;
+	position: absolute;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	/* outline: 1px solid red; */
+}
+#portfolio .item[data-ss-colspan='2'] {
+ 	width: 460px;
+}
+
+
+
+#portfolio .item .imgContainer {
+	width: 100%;
+	-webkit-box-shadow: 0px 0px 16px #7BC730;
+	-moz-box-shadow: 0px 0px 16px #7BC730;
+	box-shadow: 0px 0px 16px #7BC730;
+}
+
+#portfolio .item .imgContainer img {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* contact panel */
+#contact {
+
+}
+
+#contact .pure-form {
+	position: relative;
+	top: 200px;
+}
+
+#contact legend {
+	font-size: 180%;
+}
+
+#contact textarea {
+	height: 350px;
+}
+
+#formSuccessMsg {
+	color: #7BC730;
+    font-size: 42px;
+    position: absolute;
+    right: 20px;
+    top: 150px;
+    line-height: 32px;
+    visibility: hidden;
+}
+
+#formSuccessMsg span {
+	font-size: 20px;
+	padding-left: 32px;
+}
+
+.navArrow {
+	position: fixed;
+    top: 50%;
+}
+
+.navArrow:hover {
+	color: #7BC730;
+
+	-webkit-text-shadow: 0 0 10px #666666;
+	-moz-text-shadow: 0 0 10px #666666;
+	-ms-text-shadow: 0 0 10px #666666;
+	-o-text-shadow: 0 0 10px #666666;
+	text-shadow: 0 0 10px #666666;
+}
+
+#portfolioArw {
+	left: 25px;
+}
+
+#contactArw {
+	right: 25px;
+}
+
+
+.bgOverlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	visibility: hidden;
+}
+
+
+
+
+
