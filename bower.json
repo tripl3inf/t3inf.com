@@ -18,15 +18,16 @@
     "tests"
   ],
   "dependencies": {
+  	"normalize.css": "~3.0.1",
+	"font-awesome": "~4.0.3",
+	"snap.svg": "~0.2.0",
     "jquery": "~2.1.0",
-    "shapeshifter": "~0.1.2",
     "jqueryui": "~1.10.4",
-    "pure": "~0.4.2",
-    "font-awesome": "~4.0.3",
+	"jpreloader": "http://demo.inwebson.com/download/jpreloader-v2.zip",
     "greensock-js": "~1.10.2",
-    "snap.svg": "~0.2.0",
-    "jpreloader": "http://demo.inwebson.com/download/jpreloader-v2.zip",
-    "normalize.css": "~3.0.1",
-    "Parallaxjs": "https://github.com/stolksdorf/Parallaxjs.git"
+
+    "pure": "~0.4.2",
+    "Parallaxjs": "https://github.com/stolksdorf/Parallaxjs.git",
+    "shapeshifter": "~0.1.2"
   }
 }

@@ -15,8 +15,8 @@ build: {
 	},
 	staging: {
 		js: {
-			core: 'assets/staging/js/core/',
-			vender: 'assets/staging/js/vender/'
+			core: 'assets/staging/js/core',
+			vender: 'assets/staging/js/vender'
 		},
 		css: {
 			core: 'assets/staging/css/core',
@@ -79,14 +79,33 @@ bowercopy: {
 //END copy components
 
 
+/*
+ * Concoctenate files
+ */
+
 concat: {
     js_core: {
        src: [
-             'assets/js/core/*.js'
+             'assets/js/core/animations.js',
+             'assets/js/core/index.js',
+             'assets/js/core/gridOverlayPlugin.js'
             ],
         dest: '<%= build.staging.js.core %>/core.min.js'
-    }
+    },
+
+	css_core: {
+		options: {
+			stripBanners: true
+		},
+		src: ['assets/css/core/skeleton-960.css', 'assets/css/core/pureTheme.css', 'assets/css/core/main.css', 'assets/css/core/index.css', 'assets/css/core/portfolio.css'],
+		dest: '<%= build.staging.css.core %>/core_combined.css'
+	}
 },
+
+
+
+
+
 
 
 //========================================
@@ -102,25 +121,25 @@ clean: {
 uglify : {
 	core: {
 		options: {
-			beautify: false,
-			compress: true,
-			mangle: true,
-			banner: '/*\n js core - <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
-			footer: '==========> END core scripts <=========='
+			beautify: true,
+			compress: false,
+			mangle: false
+			//banner: '/*\n js core - <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
+			//footer: '/*\n ==========> END core scripts <==========\n*/\n'
 		},
 		src: '<%= build.staging.js.core %>/*.js',
-		dest: '<%= build.dist.js.core %>core.min.js'
+		dest: '<%= build.dist.js.core %>/core.min.js'
 	},
 	vender: {
 		options: {
-			beautify: false,
-			compress: true,
+			beautify: true,
+			compress: false,
 //			compress: {
 //				drop_console: true,
 //			},
-			mangle: true,
-			banner: '/*\n js vender dependancies - <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
-			footer: '/*\n==========> END vender dependancies scripts <==========*/\n'
+			mangle: false
+			//banner: '/*\n js vender dependancies - <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
+			//footer: '/*\n==========> END vender dependancies scripts <==========*/\n'
 		},
 		files: [{
 			//expand: true,
@@ -131,6 +150,15 @@ uglify : {
 	}
 },
 
+concat: {
+	js_core: {
+		options: {
+			stripBanners: true
+		},
+		src: ['assets/js/*.js'],
+		dest: '<%= build.staging.js.core %>/core_combined.js'
+	}
+},
 
 
 //=========================================|
@@ -167,25 +195,9 @@ csslint: {
 //},
 
 
-//cssmin: {
-//	combine: {
-//		files: {
-//			'staging/css/core/core_combined.css': ['assets/css/core/*.css']
-//			}
-//	}
-//}
 
 
 
-concat: {
-	css_core: {
-		options: {
-			stripBanners: true
-		},
-		src: ['assets/css/core/skeleton-960.css', 'assets/css/core/pureTheme.css', 'assets/css/core/main.css', 'assets/css/core/index.css', 'assets/css/core/portfolio.css'],
-		dest: '<%= build.staging.css.core %>/core_combined.css'
-	}
-},
 
 
 uncss: {
@@ -224,6 +236,16 @@ csscomb: {
             'assets/staging/css/core/core_combed_results.css': ['assets/staging/css/core/core_autoprefix_results.css'],
         },
     },
+},
+
+
+
+cssmin: {
+	css_core: {
+		files: {
+			'<%= build.dist.css.core %>/core.min.css': ['assets/staging/css/core/core_combined.css']
+			}
+	}
 }
 
 /*
@@ -232,13 +254,13 @@ csscomb: {
 
 
 });
- grunt.registerTask('test_css', ['concat:css_core']);
+ grunt.registerTask('test_css', ['cssmin:css_core']);
 //	grunt.registerTask('process_css', ['clean:css_lint_results', 'csslint:core', 'concat:css_core', 'uncss:core', 'bowercopy:pull_vender_css', 'csslint:vender']);
 
   grunt.registerTask('default', ['imageoptim:main']);
 
-  grunt.registerTask('pull_assets', ['clean', 'bowercopy:pull_vender_js', 'concat:js_core', 'uglify:vender', 'uglify:core']);
-  //, 'bowercopy:pull_vender_css',
+  grunt.registerTask('pull_assets', ['clean', 'bowercopy:pull_vender_js', 'concat:js_core', 'uglify:vender']);
+  //, 'uglify:core'
   grunt.registerTask('process_scripts', ['concat:main']);
   grunt.registerTask('ugly', ['uglify:cdn', 'uglify:main']);
 
