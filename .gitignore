@@ -13,4 +13,5 @@ Vagrantfile
 **phpmyadmin**
 **DS_Store**
 staging/**
+**/vender/bower/**
 
