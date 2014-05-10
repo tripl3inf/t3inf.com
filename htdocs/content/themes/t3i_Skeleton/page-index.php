@@ -8,6 +8,22 @@ query_posts('post_type=portfolio&posts_per_page=9');
 
 ?>
 
+<style>
+
+#t3iTxt {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+}
+</style>
+
+<svg version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1000px" height="800px"  xml:space="preserve">
+</svg>
+
+
+<svg version="1.1" id="t3iTxt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="575px" height="131px" viewBox="0 0 575 131" style="enable-background:new 0 0 575 131;" xml:space="preserve"></svg>
 
 
 <div id="index" class="paralax container">

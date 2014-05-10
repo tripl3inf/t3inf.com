@@ -40,7 +40,7 @@ jQuery.noConflict();
 	// END background overlay
 
 
-	$(document).ready(function () {
+	//$(document).ready(function () {
 		// paralax
 		parallax.add( jQuery('#index'))
 		.add( jQuery('#portfolio'))
@@ -91,7 +91,8 @@ jQuery.noConflict();
 		// END paralax
 
 
-	});
+	//});
+
 
 
 

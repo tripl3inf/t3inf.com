@@ -7,3 +7,10 @@ wordpress**
 local-config.php
 **/content/uploads/**
 npm-debug.log
+
+Vagrantfile
+.vagrant**
+**phpmyadmin**
+**DS_Store**
+staging/**
+

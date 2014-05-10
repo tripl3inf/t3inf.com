@@ -3,14 +3,14 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 build: {
-	dist: {
+	src: {
 		js: {
-			core: 'htdocs/content/themes/t3i_Skeleton/common/js/core',
-			vender: 'htdocs/content/themes/t3i_Skeleton/common/js/components'
+			core: 'assets/js/core/**/*.js',
+			vender: 'assets/js/vender/*.js'
 		},
 		css: {
-			core: 'htdocs/content/themes/t3i_Skeleton/common/css/core',
-			vender: 'htdocs/content/themes/t3i_Skeleton/common/css/components'
+			core: 'assets/css/core',
+			vender: 'assets/css/vender'
 		}
 	},
 	staging: {
@@ -23,7 +23,31 @@ build: {
 			vender: 'assets/staging/css/vender'
 		}
 	},
+	dist: {
+		js: {
+			core: 'htdocs/content/themes/t3i_Skeleton/common/js/core',
+			vender: 'htdocs/content/themes/t3i_Skeleton/common/js/components'
+		},
+		css: {
+			core: 'htdocs/content/themes/t3i_Skeleton/common/css/core',
+			vender: 'htdocs/content/themes/t3i_Skeleton/common/css/components'
+		}
+	}
 },
+
+
+//=========================================|
+// clean existing files
+//=========================================|
+clean: {
+	// js files
+	js_core: ['<%= build.staging.js.core %>'],
+	js_vender: ['<%= build.staging.js.vender %>'],
+	// css files
+	css_lint_results: ['cssLint_core_results*.xml','cssLint_vender_results*.xml']
+},
+
+
 
 //=========================================|
 // image opti osx
@@ -112,22 +136,27 @@ concat: {
 //  process scripts
 //=======================================|
 
-// remove existing file/s
-clean: {
-	js_vender: ['<%= build.staging.js.vender %>']
+concat: {
+	js_core: {
+		options: {
+			stripBanners: true
+		},
+		src: ['assets/js/core/index.js', 'assets/js/core/animations.js'],
+		dest: '<%= build.staging.js.core %>/core_combined.js'
+	}
 },
 
 //uglify config
 uglify : {
 	core: {
 		options: {
-			beautify: true,
-			compress: false,
-			mangle: false
+			beautify: false,
+			compress: true,
+			mangle: true
 			//banner: '/*\n js core - <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
 			//footer: '/*\n ==========> END core scripts <==========\n*/\n'
 		},
-		src: '<%= build.staging.js.core %>/*.js',
+		src: '<%= build.staging.js.core %>/core_combined.js',
 		dest: '<%= build.dist.js.core %>/core.min.js'
 	},
 	vender: {
@@ -150,23 +179,13 @@ uglify : {
 	}
 },
 
-concat: {
-	js_core: {
-		options: {
-			stripBanners: true
-		},
-		src: ['assets/js/*.js'],
-		dest: '<%= build.staging.js.core %>/core_combined.js'
-	}
-},
+
 
 
 //=========================================|
 // css processing
 //=========================================|
-clean: {
-	css_lint_results: ['cssLint_core_results*.xml','cssLint_vender_results*.xml']
-},
+
 
 csslint: {
 	core: {
@@ -246,7 +265,26 @@ cssmin: {
 			'<%= build.dist.css.core %>/core.min.css': ['assets/staging/css/core/core_combined.css']
 			}
 	}
-}
+},
+
+
+
+//=========================================|
+// watch / livereload
+//=========================================|
+
+watch: {
+	  scripts: {
+	    files: ['<%= build.src.js.core %>'],
+	    tasks: ['js_core'],
+	    options: {
+	      spawn: false,
+	      livereload: true
+	    },
+	  },
+	}
+
+
 
 /*
  * *********** END TASKS *************************
@@ -258,6 +296,9 @@ cssmin: {
 //	grunt.registerTask('process_css', ['clean:css_lint_results', 'csslint:core', 'concat:css_core', 'uncss:core', 'bowercopy:pull_vender_css', 'csslint:vender']);
 
   grunt.registerTask('default', ['imageoptim:main']);
+
+  // process core js files
+  grunt.registerTask('js_core', ['clean:js_core', 'concat:js_core', 'uglify:core']);
 
   grunt.registerTask('pull_assets', ['clean', 'bowercopy:pull_vender_js', 'concat:js_core', 'uglify:vender']);
   //, 'uglify:core'

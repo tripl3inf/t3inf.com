@@ -17,7 +17,8 @@
     "grunt-contrib-clean": "^0.5.0",
     "grunt-uncss": "^0.3.3",
     "grunt-autoprefixer": "^0.7.3",
-    "grunt-csscomb": "^2.0.1"
+    "grunt-csscomb": "^2.0.1",
+    "grunt-contrib-watch": "^0.6.1"
   },
   "license": "ISC"
 }
